@@ -1,0 +1,12 @@
+{
+  "name": "documentationpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"concurrently \"http-server\" \"sass --watch sass:css\""
+  },
+  "keywords": [],
+  "author": "Rafael Contreras",
+  "license": "ISC"
+}
