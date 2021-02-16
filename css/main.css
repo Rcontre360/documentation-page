@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #EAEAEA;
+  color: #302525;
+  padding-top: 50px;
+  font-family: calibri;
+}
+@media (max-width: 800px) {
+  body .navbar {
+    width: 100vw;
+    right: 50%;
+    transform: translateX(50%);
+    top: 45px;
+    padding: 0 1vw;
+  }
+  body .navbar .nav-list {
+    height: 25vh;
+  }
+  body .container {
+    margin-top: calc(45px + 35vh);
+    width: 90vw;
+  }
+}
+@media (max-width: 300px) {
+  body .navbar-top .nav-title {
+    font-size: 100%;
+  }
+}
+
+.navbar-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #212121;
+  color: #EEEEEE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.navbar-top .nav-title {
+  padding: 8px 1em;
+}
+.navbar-top .nav-container .nav-toggler {
+  background: #212121;
+  color: #EEEEEE;
+  border: none;
+  outline: none;
+  display: none;
+  padding: 1em;
+}
+.navbar-top .nav-container .nav-toggler:hover, .navbar-top .nav-container .nav-toggler:hover > * {
+  background: white;
+  color: #222222;
+}
+.navbar-top .nav-container .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-top .nav-container .nav-item {
+  list-style: none;
+  padding: 1em;
+}
+.navbar-top .nav-container .nav-item:hover, .navbar-top .nav-container .nav-item:hover > * {
+  background: white;
+  color: #222222;
+}
+.navbar-top .nav-container a, .navbar-top .nav-container a:visited {
+  transition: all 0.3s ease-in-out;
+  color: #EEEEEE;
+  text-decoration: none;
+}
+.navbar-top .nav-container a:hover, .navbar-top .nav-container a:hover > *, .navbar-top .nav-container a:visited:hover, .navbar-top .nav-container a:visited:hover > * {
+  background: white;
+  color: #222222;
+}
+@media (max-width: 800px) {
+  .navbar-top {
+    align-items: flex-start;
+  }
+  .navbar-top .nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .navbar-top .nav-container .navbar-nav {
+    display: none;
+    padding: 20px;
+  }
+  .navbar-top .nav-container .navbar-nav.active {
+    display: block;
+  }
+  .navbar-top .nav-container .nav-toggler {
+    display: block;
+  }
+}
+
+.navbar {
+  background: white;
+  color: #302525;
+  position: fixed;
+  width: 30vw;
+  align-self: flex-start;
+  border-right: solid lightgrey 3px;
+  border-bottom: solid #424242 5px;
+}
+.navbar .nav-header {
+  background: #424242;
+  color: #EEEEEE;
+  padding: 0.5em;
+  font-size: 150%;
+  text-align: center;
+}
+.navbar .nav-list {
+  padding: 0.5em;
+  height: 80vh;
+  overflow-y: scroll;
+}
+.navbar .nav-list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background: lightgrey;
+}
+.navbar .nav-list::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+.navbar .nav-list .nav-item {
+  list-style: none;
+  padding: 1em;
+  box-shadow: 0 0 3px grey;
+  text-align: center;
+}
+.navbar .nav-list .nav-item:hover, .navbar .nav-list .nav-item:hover > * {
+  background: #e6e6e6;
+  color: #302525;
+}
+.navbar .nav-list a, .navbar .nav-list a:active {
+  color: #302525;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 65vw;
+}
+.container .section {
+  padding: 1em 0;
+  width: 100%;
+}
+.container .section-header {
+  font-size: 200%;
+  font-weight: bolder;
+  align-self: flex-start;
+}
+.container .content {
+  width: 90%;
+}
+.container .content p {
+  margin: 0.5em 0;
+}
+.container .content ul {
+  margin: 1em 0 0 2em;
+}
+.container .content code {
+  display: block;
+  margin: 1em 2em;
+  padding: 1em;
+  background: #cdcdcd;
+  border: solid grey 2px;
+}
+
+/*# sourceMappingURL=main.css.map */
