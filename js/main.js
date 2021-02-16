@@ -22,7 +22,7 @@ const events = ()=>{
 }
 
 const start = async ()=>{
-	const Content = await fetch("/documentation-page/js/content.json").then(res=>res.json()).catch(catchError);
+	const Content =await fetch("/documentation-page/js/content.json").then(res=>res.json()).catch(catchError);
 	const {headers} = Content;
 
 	const sections = document.querySelectorAll("section");
