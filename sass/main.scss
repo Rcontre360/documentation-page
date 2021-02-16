@@ -35,3 +35,97 @@ body{
 	padding-top:50px;
 	font-family: calibri;
 }
+
+
+.navbar-top{
+	@include flex(row,space-between);
+	@include theme(color(primary));
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index: 100;
+	.nav-title{
+		padding:8px 1em;
+	}
+	.nav-container{
+		.nav-toggler{
+			@include theme(color(primary));
+			@include hover(color(primary),color(clear));
+			border:none;
+			outline: none;
+			display: none;
+			padding:1em;
+		}
+		.navbar-nav{
+			@include flex;
+		}
+		.nav-item{
+			@include hover(color(primary),color(clear));
+			list-style: none;
+			padding:1em;
+		}
+		a,a:visited{
+			@include hover(color(primary),color(clear));
+			@include transition(0.3s);
+			color:color(clear);
+			text-decoration: none;
+		}
+	}
+	@include media-under(devise(medium)){
+		align-items: flex-start;
+		.nav-container{
+			@include flex(column,flex-end);
+			.navbar-nav{
+				display: none;
+				padding:20px;
+				&.active{
+					display: block;
+				}
+			}
+			.nav-toggler{
+				display: block;
+			}
+		}
+	}
+}
+
+.navbar{
+	@include theme(white);
+	position:fixed;
+	width:30vw;
+	align-self: flex-start;
+	border-right:solid lightgrey 3px;
+	border-bottom:solid color(secondary) 5px;
+	.nav-header{
+		@include theme(color(secondary));
+		padding:0.5em;
+		font-size:150%;
+		text-align: center;
+	}
+	.nav-list{
+		padding:0.5em;
+		height:80vh;
+		overflow-y: scroll;
+		&::-webkit-scrollbar{
+			width:5px;
+			border-radius:10px;
+			background:lightgrey;
+		}
+		&::-webkit-scrollbar-thumb{
+			background:grey;
+			border-radius:10px;
+		}
+		.nav-item{
+			@include hover(white,color(text),10%,0%);
+			list-style: none;
+			padding:1em;
+			box-shadow: 0 0 3px grey;
+			text-align: center;
+		}
+		a,a:active{
+			color:color(text);
+			text-decoration: none;
+		}
+	}
+
+}
