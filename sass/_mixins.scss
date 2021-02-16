@@ -1,0 +1,61 @@
+
+@import "variables";
+
+@mixin flex($direction:row,$position:center){
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $position;
+	@if ($direction==row or $direction==row-reverse){
+		align-items: center;
+	} @else {
+		align-items:$position;
+	}
+}
+
+@mixin grid($rows,$columns,$rowGap:0px,$columnGap:0px){
+	display: grid;
+	grid-template-rows:$rows;
+	grid-row-gap: $rowGap;
+	grid-template-columns: $columns;
+	grid-column-gap: $columnGap;
+}
+
+@mixin theme($color:color(primary)){
+	background:$color;
+	@if (lightness($color)<40%){
+		color:color(clear);
+	} @else {
+		color:color(text);
+	}
+}
+
+@mixin hover($color,$text,$backAmount:100%,$textAmount:80%,$delay:false){
+	&:hover,&:hover>*{
+		@if $delay{
+			transition: 0.3s;
+		}
+		@if (lightness($color)<40%){
+			background:lighten($color,$backAmount);
+			color:darken($text,$textAmount);
+		} @else {
+			background:darken($color,$backAmount);
+			color:lighten($text,$textAmount);
+		}
+	}
+}
+
+@mixin transition($time:1s,$property:all){
+	transition:$property $time ease-in-out;
+}
+
+@mixin media-under($width){
+	@media (max-width: $width){
+		@content;
+	}
+}
+
+@mixin media-over($width){
+	@media (min-width:$width){
+		@content;
+	}
+}
