@@ -1,0 +1,17 @@
+
+{
+	"headers" : ["Introduction",
+		"What_you_should_already_know",
+		"Javascript_and_Java",
+		"Hello_world",
+		"Variables",
+		"Declaring_variables",
+		"Variable_scope",
+		"Global_variables",
+		"Constants",
+		"Data_types",
+		"if...else_statement",
+		"while_statement",
+		"Function_declarations",
+		"Reference"]
+}
