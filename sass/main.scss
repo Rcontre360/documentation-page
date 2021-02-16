@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	@include theme(color(background));
+	@include media-under(devise(medium)){
+		.navbar{
+			width:100vw;
+			right:50%;
+			transform: translateX(50%);
+			top:45px;
+			padding:0 1vw;
+			.nav-list{
+				height:25vh;
+			}
+		}
+		.container{
+			margin-top:calc(45px + 35vh);
+			width:90vw;
+		}
+	}
+	@include media-under(devise(tiny)){
+		.navbar-top{
+			.nav-title{
+				font-size:100%;
+			}
+		}
+	}
+	padding-top:50px;
+	font-family: calibri;
+}
